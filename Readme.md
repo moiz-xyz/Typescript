@@ -12,6 +12,7 @@ let username: string = "JohnDoe";
 ### Example 1: Numbers
 let age: number = 25;
 
+
 ## 2. Interfaces 🧩 
 
  ### Example 1: Basic Interface
