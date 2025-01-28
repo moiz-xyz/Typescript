@@ -1,3 +1,7 @@
+// 1. Create and Interact with Objects
+// Create instances of the secodyear class.
+// Access and modify their properties.
+// Practice calling methods (add a method to your class).
 var secodyear = /** @class */ (function () {
     function secodyear(std_name, std_FName, std_class, std_rollNo) {
         this.std_nmae = std_name;
@@ -5,73 +9,37 @@ var secodyear = /** @class */ (function () {
         this.std_class = std_class;
         this.std_rollNo = std_rollNo;
     }
+    secodyear.prototype.displayStudentsDetail = function () {
+        console.log("Students name ".concat(this.std_nmae));
+        console.log("Father name ".concat(this.std_FName));
+        console.log("Class ".concat(this.std_class));
+        console.log("Roll No ".concat(this.std_rollNo));
+    };
     return secodyear;
 }());
 var first = new secodyear("Abdul Moiz", " Ahned Nawaz", 12, 5006);
-console.log(first);
-// 1. Create and Interact with Objects
-// Create instances of the secodyear class.
-// Access and modify their properties.
-// Practice calling methods (add a method to your class).
-// typescript
-// Copy
-// Edit
-// // Example
-// const student = new secodyear("Ali", "Ahmed", 12, 101);
-// console.log(student.std_nmae); // Access property
-// 2. Add Methods
-// Enhance your class by adding some methods to manipulate or display data.
-// typescript
-// Copy
-// Edit
-// class secodyear {
-//     std_nmae: string;
-//     std_FName: string;
-//     std_class: number;
-//     std_rollNo: number;
-//     constructor(std_name: string, std_FName: string, std_class: number, std_rollNo: number) {
-//         this.std_nmae = std_name;
-//         this.std_FName = std_FName;
-//         this.std_class = std_class;
-//         this.std_rollNo = std_rollNo;
-//     }
-//     getFullName(): string {
-//         return `${this.std_nmae} ${this.std_FName}`;
-//     }
-//     promoteClass(): void {
-//         this.std_class++;
-//     }
-// }
-// // Usage
-// const student = new secodyear("Ali", "Ahmed", 12, 101);
-// console.log(student.getFullName()); // Output: Ali Ahmed
-// student.promoteClass();
-// console.log(student.std_class); // Output: 13
-// 3. Use Access Modifiers
-// Learn about private, protected, and public access modifiers to restrict access to certain properties or methods.
-// typescript
-// Copy
-// Edit
-// class secodyear {
-//     private std_nmae: string;
-//     private std_FName: string;
-//     public std_class: number;
-//     public std_rollNo: number;
-//     constructor(std_name: string, std_FName: string, std_class: number, std_rollNo: number) {
-//         this.std_nmae = std_name;
-//         this.std_FName = std_FName;
-//         this.std_class = std_class;
-//         this.std_rollNo = std_rollNo;
-//     }
-//     getFullName(): string {
-//         return `${this.std_nmae} ${this.std_FName}`;
-//     }
-// }
+var second = new secodyear("Yazdan Ali mirza", "Ali moirza", 12, 5001);
+first.displayStudentsDetail();
+second.displayStudentsDetail();
+// 2. Use Access Modifiers
+// Learn about private, protected, and public access modifiers to restrict access to 
+// certain properties or methods.
+var secodyear2 = /** @class */ (function () {
+    function secodyear2(std_name, std_FName, std_class, std_rollNo) {
+        this.std_nmae = std_name;
+        this.std_FName = std_FName;
+        this.std_class = std_class;
+        this.std_rollNo = std_rollNo;
+    }
+    secodyear2.prototype.getFullName = function () {
+        return "".concat(this.std_nmae, " ").concat(this.std_FName);
+    };
+    return secodyear2;
+}());
+var first2 = new secodyear("Abdul Moiz", " Ahned Nawaz", 12, 5006);
+console.log(first2);
 // 4. Explore Inheritance
 // Learn how to extend classes and reuse code using inheritance.
-// typescript
-// Copy
-// Edit
 // class Student {
 //     std_name: string;
 //     constructor(std_name: string) {
